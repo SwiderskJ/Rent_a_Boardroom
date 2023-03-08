@@ -2,7 +2,7 @@ from django import forms
 from rooms_app.models import Room
 
 
-class RoomForm(forms.Form):
+class CreateRoomForm(forms.Form):
     name = forms.CharField()
     description = forms.CharField(widget=forms.Textarea)
     city = forms.CharField()
