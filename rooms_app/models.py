@@ -2,4 +2,7 @@ from django.db import models
 
 
 class Room(models.Model):
-    pass
+    name = models.CharField(max_length=50)
+    capacity = models.IntegerField()
+    projector = models.BooleanField()
+
