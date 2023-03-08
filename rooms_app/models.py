@@ -2,7 +2,20 @@ from django.db import models
 
 
 class Room(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=24)
+    city = models.CharField(max_length=60)
+    street = models.CharField(max_length=60)
+    street_number = models.CharField(max_length=12)
+    local_number = models.IntegerField()
+    post_code_first = models.IntegerField()
+    post_code_second = models.IntegerField()
+    level = models.IntegerField()
     capacity = models.IntegerField()
     projector = models.BooleanField()
+    seats = models.IntegerField()
+    tables = models.BooleanField()
+    catering = models.BooleanField()
+    private_parking = models.BooleanField()
+    sound_system = models.BooleanField()
+
 
