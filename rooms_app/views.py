@@ -18,3 +18,9 @@ class ListRoomsView(View):
         all_room_list = Room.objects.all().order_by('name')
         return render(request, 'rooms_list.html', context={'rooms': all_room_list})
 
+
+class RoomDetailsView(View):
+
+    def get(self, request, room_id):
+        room = Room.objects.filter(id=room_id)
+        return render(request, 'room_detail.html', context={'room': room})
