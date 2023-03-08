@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="main_site">
+        <div class="list">
+            <ul>
+                {% if rooms %}
+                    {% for room in rooms %}
+                        <li>{{ room.name }}</li>
+                    {% endfor %}
+                {% else %}
+                <p>List is empty</p>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+{% endblock main %}

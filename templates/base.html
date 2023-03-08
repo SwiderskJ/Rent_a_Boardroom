@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/demo_page.css">
+
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="#">Name</a></li>
+          <li><a href="#">Browse</a></li>
+        </ul>
+        <ul class="pull-right">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    {% block main %}{% endblock main %}
+    {% block downpart %}{% endblock downpart %}
+    <div class="learn-more">
+	  <div class="container">
+		<div class="row">
+	      <div class="col-md-4">
+			<h3>Space for your business</h3>
+			<p>From small boardroom to great halls and hotels: choose unique spaces in 192 countries.</p>
+			<p><a href="#">See how to rent a boardroom in few seconds</a></p>
+	      </div>
+		  <div class="col-md-4">
+			<h3>Host</h3>
+			<p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+			<p><a href="#">Learn more about hosting</a></p>
+		  </div>
+		  <div class="col-md-4">
+			<h3>Trust and Safety</h3>
+			<p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+			<p><a href="#">Learn about trust at renting your space</a></p>
+		  </div>
+	    </div>
+        <footer class="footer">© SwiderskJ Studio 2023</footer>
+	  </div>
+	</div>
+  </body>
+</html>
