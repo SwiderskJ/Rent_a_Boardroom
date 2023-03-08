@@ -1,5 +1,5 @@
 from django import forms
-from models import Room
+from rooms_app.models import Room
 
 
 class RoomForm(forms.Form):
