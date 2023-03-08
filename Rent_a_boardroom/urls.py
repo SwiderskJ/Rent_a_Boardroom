@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rooms_app.views import DemoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Rent_a_boardroom/', DemoView.as_view(), name='demo_page'),
+
 ]
