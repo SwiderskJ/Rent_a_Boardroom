@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Room(models.Model):
-    name = models.CharField(max_length=24)
-    description = models.CharField(max_length=256)
-    city = models.CharField(max_length=60)
-    street = models.CharField(max_length=60)
+    name = models.CharField(max_length=24, default='')
+    description = models.CharField(max_length=256, default='')
+    city = models.CharField(max_length=60, default='')
+    street = models.CharField(max_length=60, default='')
     street_number = models.CharField(max_length=12)
     local_number = models.IntegerField()
     post_code_first = models.IntegerField()
