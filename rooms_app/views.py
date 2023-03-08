@@ -8,6 +8,13 @@ from django.views import View
 class DemoView(View):
 
     def get(self, request):
+
+        return render(request, 'demo_view.html')
+
+
+class ListRoomsView(View):
+
+    def get(self, request):
         all_room_list = Room.objects.all().order_by('name')
-        return render(request, 'demo_view.html', context={'rooms': all_room_list})
+        return render(request, 'rooms_list.html', context={'rooms': all_room_list})
 
