@@ -18,7 +18,7 @@ class UserCreateView(View):
         if form.is_valid():
             data = form.cleaned_data
 
-            user = User.objects.create_user(
+            User.objects.create_user(
                 username=data.get('login'),
                 password=data.get('password'),
                 first_name=data.get('first_name'),
@@ -31,7 +31,7 @@ class UserCreateView(View):
 
 
 class LoginView(View):  # This class-based view handles requests for the login page.
-    def get(self, request): # The GET method returns the login form.
+    def get(self, request):  # The GET method returns the login form.
         form = LoginForm()
 
         return render(request, 'login.html', context={
@@ -39,7 +39,7 @@ class LoginView(View):  # This class-based view handles requests for the login p
             }
         )
 
-    def post(self, request):  # The POST method authenticates the user and redirect to hero list page.
+    def post(self, request):  # The POST method authenticates the user.
         form = LoginForm(request.POST)
 
         if form.is_valid():
@@ -58,9 +58,9 @@ class LoginView(View):  # This class-based view handles requests for the login p
                 # log in
                 login(request, user)
 
-                return redirect(reverse('hero_list'))
+                return redirect(reverse('room_list'))
             else:
-                return redirect(reverse('login'))
+                return redirect(reverse('register'))
 
 
 class LogoutView(View):  # This view logs the user out of the application and returns a logout page to the client.
