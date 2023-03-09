@@ -2,14 +2,14 @@ from django import forms
 
 
 class UserCreateForm(forms.Form):
-    login = forms.CharField(label='login')
-    password = forms.CharField(label='password', widget=forms.PasswordInput)
-    first_name = forms.CharField(label='first_name')
-    last_name = forms.CharField(label='last_name')
-    email = forms.EmailField(label='email')
-    host = forms.BooleanField(label='host', required=False)
+    login = forms.CharField(label='Login')
+    password = forms.CharField(label='Password', widget=forms.PasswordInput)
+    first_name = forms.CharField(label='First_name')
+    last_name = forms.CharField(label='Last_name')
+    email = forms.EmailField(label='Email')
+    host = forms.BooleanField(label='Holder', required=False)
 
 
 class LoginForm(forms.Form):
-    login = forms.CharField(label='login')
-    password = forms.CharField(label='password', widget=forms.PasswordInput)
+    username = forms.CharField(label='Login')
+    password = forms.CharField(label='Password', widget=forms.PasswordInput)
