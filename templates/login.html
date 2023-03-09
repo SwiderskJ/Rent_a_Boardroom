@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+    <form method="post">{% csrf_token %}
+        <section class="register">
+            {{ form.as_p}}
+            <p><input type="submit"></p>
+        </section>
+    </form>
+{% endblock main %}

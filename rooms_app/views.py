@@ -65,3 +65,8 @@ class AvaiableRoomView(View):
 
     def get(self, request):
         pass
+
+class ReservationView(View):
+
+    def get(self, request):
+        return render(request, 'reservations.html')
