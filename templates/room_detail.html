@@ -2,13 +2,11 @@
 {% block main %}
         <div class="main_site">
             <div class="list">
-                <ul>
-                    {% if room %}
-                        {{ room.name }}
-                    {% else %}
-                    <p>List is empty</p>
-                    {% endif %}
-                </ul>
+                <section>
+                    <p>{{ room.name }}</p>
+                    <p><a href="{% url 'edit_room' room.id %}">Edit</a></p>
+                    <p><a href="{% url 'delete_room' room.id %}">Delete</a></p>
+                </section>
             </div>
         </div>
 {% endblock main %}
