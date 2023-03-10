@@ -61,10 +61,12 @@ class AddRoomView(View):
             return redirect(reverse('room_detail', kwargs={'room_id': room.id}))
 
 
+
 class AvaiableRoomView(View):
 
     def get(self, request):
         pass
+
 
 class ReservationView(View):
 
