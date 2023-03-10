@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Room(models.Model):
@@ -18,5 +19,10 @@ class Room(models.Model):
     catering = models.BooleanField(default=None)
     private_parking = models.BooleanField(default=None)
     sound_system = models.BooleanField(default=None)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+
+
 
 
